@@ -1,0 +1,29 @@
+hey! built this simple tool just to learn a bit python today. 
+
+i block social media with coldturkey but still want to post, so i made this script with tweepy. beats paid schedulers and limited free tiers.
+
+## how to use this
+
+### 1. get your twitter api credentials
+
+- go to https://developer.x.com and sign in
+- create a new project (name it whatever you want)
+- create an app within that project
+- for app permissions, select "read and write"
+- for callback url, enter "http://localhost/callback"
+- for website url, enter any url (your github or just "http://localhost")
+- in app settings > authentication settings > enable oauth 1.0a
+- generate and save your api keys, bearer token, and access tokens
+- copy all these values to your `.env` file (use `.env.example` as template)
+
+### 2. set up your tweets
+
+- add what you want to tweet to `tweet.txt`
+
+### 3. run the script
+
+- run `python3 scheduler.py` in terminal
+- confirm when prompted
+ 
+
+happy tweeting! 
