@@ -54,12 +54,22 @@ def check_with_user():
 
     print(f"\nyou picked: {tweet}")
 
-    confirm = input("\n type 'yes' to post: ")
-    if confirm == 'yes':
-        print("the tweet will be posted (date)", )
-        post_tweet(tweet)
-    else:
-        print("tweet cancelled")
-    
+    choice = input("\nDo you want to (1) post now or (2) schedule for later? Enter 1 or 2: ")
+    if choice == "1":   
+        confirm = input("\nType 'yes' to post now: ")
+        if confirm == 'yes':
+            print("posting now...", )
+            post_tweet(tweet)
+            print("tweeted")
+        else:
+            print("tweet cancelled")
+    elif choice == "2":
+        schedule_date = input("\nEnter date and time to post (format: YYYY-MM-DD HH:MM): ")
 
-check_with_user()
+        with open("scheduled_tweet.txt", "w") as f:
+            f.write(f"{schedule_date}|{tweet}")
+        
+        print(f"\nTweet scheduled for {schedule_date}")
+                    
+if __name__ == "__main__":
+    check_with_user() 
