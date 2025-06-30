@@ -32,3 +32,7 @@ i block social media with coldturkey but still want to post, so i made this scri
  
 
 happy tweeting! 
+
+notes to myself:
+- make so that you can post media too 
+- cron to schedule 
